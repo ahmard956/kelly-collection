@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Cormorant Garamond", serif;
+  --font-sans: "Inter", "General Sans", sans-serif;
+  
+  --color-luxury-pitch: #0A0A0A;
+  --color-luxury-charcoal: #1A1A1A;
+  --color-luxury-stone: #2E2E2E;
+  --color-luxury-ivory: #F9F8F6;
+  --color-luxury-champagne: #E5D4B3;
+  --color-luxury-gold: #C5A880;
+
+  --letter-spacing-vogue: 0.25em;
+  --letter-spacing-cinematic: 0.4em;
+  
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #2E2E2E;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #C5A880;
+  }
+}
+
+/* Base style resets mapping natively onto modern DOM elements */
+@layer base {
+  body {
+    background-color: var(--color-luxury-pitch);
+    color: var(--color-luxury-ivory);
+    font-family: var(--font-sans);
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  body::selection {
+    background-color: var(--color-luxury-gold);
+    color: var(--color-luxury-pitch);
+  }
+}
